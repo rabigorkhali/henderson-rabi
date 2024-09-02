@@ -24,7 +24,3 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('users', UserController::class);
     Route::resource('posts', PostController::class);
 });
-git commit -m "feat: user module and authentication added with partial post module"
-git branch -M main
-git remote add origin https://github.com/rabigorkhali/henderson-rabi.git
-git push -u origin main
