@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Http\Request;
 
-class PostRequest extends FormRequest
+class PostCategoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,13 +24,18 @@ class PostRequest extends FormRequest
      */
     public function rules(Request $request)
     {
+        $validate = [];
+        if ($request->method() == 'POST') {
 
-        $validate = [
-            'title' => 'required|min:3|max:255',
-            'body' => 'required|min:3|max:255',
-            'image' => 'nullable|image|mimes:jpg,jpeg,png,svg|max:25048',
-        ];
-
+            $validate = [
+                'name' => 'required|unique:post_categories|string|max:255',
+            ];
+        }
+        if ($request->method() == 'PUT') {
+            $validate = [
+                'name' => 'required|unique:post_categories,name,' . $request->id,
+            ];
+        }
         return $validate;
     }
 

@@ -30,15 +30,19 @@
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link {{ str_contains(Route::currentRouteName(), 'home') ? 'active' : '' }} "
-                                    href="{{ route('home') }}">Home</a>
+                                   href="{{ route('home') }}">Home</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{ str_contains(Route::currentRouteName(), 'posts') ? 'active' : '' }} "
                                    href="{{ route('posts.index') }}">Posts</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link {{ str_contains(Route::currentRouteName(), 'post-categories') ? 'active' : '' }} "
+                                   href="{{ route('post-categories.index') }}">Post Categories</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link {{ str_contains(Route::currentRouteName(), 'users') ? 'active' : '' }} "
-                                    href="{{ route('users.index') }}" href="{{ route('users.index') }}">Users</a>
+                                   href="{{ route('users.index') }}" href="{{ route('users.index') }}">Users</a>
                             </li>
 
                             <li class="nav-item">

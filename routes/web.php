@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\PostCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +23,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::resource('users', UserController::class);
+    Route::resource('post-categories', PostCategoryController::class);
     Route::resource('posts', PostController::class);
 });
