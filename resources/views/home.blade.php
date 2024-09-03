@@ -90,4 +90,25 @@
             </nav>
         </div>
     </div>
+<hr>
+    <h4>{{__('Post from Api')}}</h4>
+    <table class="table">
+
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach($apiPosts as $apiPostDatum)
+        <tr>
+            <td>{{$apiPostDatum['id']}}</td>
+            <td>{{$apiPostDatum['title']}}</td>
+            <td>{{$apiPostDatum['body']}}</td>
+        </tr>
+        @endforeach
+        </tbody>
+    </table>
 @endsection
