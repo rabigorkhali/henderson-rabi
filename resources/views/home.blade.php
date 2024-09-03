@@ -13,7 +13,7 @@
                 @php
                     $categories = request()->query('categories', []);
                 @endphp
-                {{__('Select Cateegory')}}
+                {{__('Select Category')}}
                 <select id="categories" multiple name="categories[]" class="form-control">
                     <option value="">Select Categories</option>
                     @foreach($postCategories as $postCategoryKey => $postCategoryDatum)
