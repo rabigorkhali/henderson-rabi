@@ -47,7 +47,7 @@ class PostController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/posts",
+     *     path="/posts",
      *     operationId="getPostsList",
      *     tags={"Posts"},
      *     summary="Get list of posts",
@@ -140,7 +140,7 @@ class PostController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/posts/{id}",
+     *     path="/posts/{id}",
      *     summary="Update an existing post",
      *     tags={"Posts"},
      *     @OA\Parameter(
@@ -215,7 +215,7 @@ class PostController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/posts/{id}",
+     *     path="/posts/{id}",
      *     summary="Delete a post",
      *     tags={"Posts"},
      *     security={{"bearerAuth": {}}},
