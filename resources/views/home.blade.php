@@ -15,6 +15,7 @@
                 @endphp
                 {{__('Select Cateegory')}}
                 <select id="categories" multiple name="categories[]" class="form-control">
+                    <option value="">Select Categories</option>
                     @foreach($postCategories as $postCategoryKey => $postCategoryDatum)
                         <option @if($categories && in_array($postCategoryDatum->id, $categories)) selected
                                 @endif   value="{{$postCategoryDatum->id}}">{{$postCategoryDatum->name}}</option>
