@@ -1,0 +1,38 @@
+/* Custom CSS */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.hero-section {
+    height: 300px;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.post-card {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons i {
+    color: white;
+    font-size: 24px;
+    margin: 0 10px;
+}
